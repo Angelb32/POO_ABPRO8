@@ -1,62 +1,21 @@
-package POO_ABPRO5;
+package POO_ABPRO6;
 
-/**
- * Clase que representa a un cliente de la empresa de asesorías en prevención de riesgos.
- * 
- * @version 1.0
- * @author Angel Brito
- */
 public class Cliente {
-
-    /** RUT del cliente */
     private int rut;
-    
-    /** Nombres del cliente */
     private String nombres;
-    
-    /** Apellidos del cliente */
     private String apellidos;
-    
-    /** Teléfono del cliente */
     private String telefono;
-    
-    /** AFP del cliente */
     private String afp;
-    
-    /** Sistema de salud del cliente: 1 (Fonasa) o 2 (Isapre) */
     private int sistemaSalud;
-    
-    /** Dirección del cliente */
     private String direccion;
-    
-    /** Comuna del cliente */
     private String comuna;
-    
-    /** Edad del cliente */
     private int edad;
     
-    /**
-     * Constructor sin parámetros de la clase Cliente.
-     */
     public Cliente() {
-        
+        // Constructor vacío
     }
     
-    /**
-     * Constructor de la clase Cliente que recibe todos los atributos como parámetros.
-     * 
-     * @param rut RUT del cliente
-     * @param nombres Nombres del cliente
-     * @param apellidos Apellidos del cliente
-     * @param telefono Teléfono del cliente
-     * @param afp AFP del cliente
-     * @param sistemaSalud Sistema de salud del cliente
-     * @param direccion Dirección del cliente
-     * @param comuna Comuna del cliente
-     * @param edad Edad del cliente
-     */
-    public Cliente(int rut, String nombres, String apellidos, String telefono, String afp,
-            int sistemaSalud, String direccion, String comuna, int edad) {
+    public Cliente(int rut, String nombres, String apellidos, String telefono, String afp, int sistemaSalud, String direccion, String comuna, int edad) {
         this.rut = rut;
         this.nombres = nombres;
         this.apellidos = apellidos;
@@ -68,16 +27,93 @@ public class Cliente {
         this.edad = edad;
     }
     
-    /**
-     * Método toString que retorna una representación en String del objeto Cliente.
-     * 
-     * @return Representación en String del objeto Cliente.
-     */
-    @Override
-    public String toString() {
-        return "Cliente [rut=" + rut + ", nombres=" + nombres + ", apellidos=" + apellidos
-                + ", telefono=" + telefono + ", afp=" + afp + ", sistemaSalud=" + sistemaSalud
-                + ", direccion=" + direccion + ", comuna=" + comuna + ", edad=" + edad + "]";
+    public int getRut() {
+        return rut;
     }
     
+    public void setRut(int rut) {
+        this.rut = rut;
+    }
+    
+    public String getNombres() {
+        return nombres;
+    }
+    
+    public void setNombres(String nombres) {
+        this.nombres = nombres;
+    }
+    
+    public String getApellidos() {
+        return apellidos;
+    }
+    
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
+    }
+    
+    public String getTelefono() {
+        return telefono;
+    }
+    
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+    
+    public String getAfp() {
+        return afp;
+    }
+    
+    public void setAfp(String afp) {
+        this.afp = afp;
+    }
+    
+    public int getSistemaSalud() {
+        return sistemaSalud;
+    }
+    
+    public void setSistemaSalud(int sistemaSalud) {
+        this.sistemaSalud = sistemaSalud;
+    }
+    
+    public String getDireccion() {
+        return direccion;
+    }
+    
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+    
+    public String getComuna() {
+        return comuna;
+    }
+    
+    public void setComuna(String comuna) {
+        this.comuna = comuna;
+    }
+    
+    public int getEdad() {
+        return edad;
+    }
+    
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+    
+    public String obtenerNombre() {
+        return this.nombres + " " + this.apellidos;
+    }
+    
+    public void obtenerSistemaSalud() {
+        if (this.sistemaSalud == 1) {
+            System.out.println("El cliente tiene sistema de salud Fonasa.");
+        } else if (this.sistemaSalud == 2) {
+            System.out.println("El cliente tiene sistema de salud Isapre.");
+        } else {
+            System.out.println("Tipo de sistema de salud no registrado.");
+        }
+    }
+    
+    public String toString() {
+        return "RUT: " + this.rut + ", Nombres: " + this.nombres + ", Apellidos: " + this.apellidos + ", Teléfono: " + this.telefono + ", AFP: " + this.afp + ", Sistema de salud: " + this.sistemaSalud + ", Dirección: " + this.direccion + ", Comuna: " + this.comuna + ", Edad: " + this.edad;
+    }
 }

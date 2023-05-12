@@ -1,24 +1,22 @@
 package Tareas;
 
-	public abstract class Usuario_POO_ABPRO8 implements Asesoria_POO_ABPRO8 {
-    private String nombre;
-    private String correo;
+	public class Usuario_POO_ABPRO8 implements Asesoria_POO_ABPRO8 {
+    private String nombreUsuario;
 
-    public Usuario_POO_ABPRO8(String nombre, String correo) {
-        this.nombre = nombre;
-        this.correo = correo;
+    public Usuario_POO_ABPRO8(String nombreUsuario) {
+        this.nombreUsuario = nombreUsuario;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNombreUsuario() {
+        return nombreUsuario;
     }
 
-    public String getCorreo() {
-        return correo;
+    public void setNombreUsuario(String nombreUsuario) {
+        this.nombreUsuario = nombreUsuario;
     }
 
     @Override
     public void analizarUsuario() {
-        System.out.println("Nombre: " + nombre);
+        System.out.println("Nombre de usuario: " + nombreUsuario);
     }
 }

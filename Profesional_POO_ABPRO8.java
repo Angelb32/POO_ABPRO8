@@ -1,29 +1,35 @@
 package Tareas;
 
 	public class Profesional_POO_ABPRO8 extends Usuario_POO_ABPRO8 {
-
     private String titulo;
-    private int añosExperiencia;
+    private String fechaIngreso;
 
-    public Profesional_POO_ABPRO8(String nombre, String correo, String titulo, int añosExperiencia) {
-        super(nombre, correo);
+    public Profesional_POO_ABPRO8(String nombreUsuario, String titulo, String fechaIngreso) {
+        super(nombreUsuario);
         this.titulo = titulo;
-        this.añosExperiencia = añosExperiencia;
+        this.fechaIngreso = fechaIngreso;
     }
 
     public String getTitulo() {
         return titulo;
     }
 
-    public int getAñosExperiencia() {
-        return añosExperiencia;
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getFechaIngreso() {
+        return fechaIngreso;
+    }
+
+    public void setFechaIngreso(String fechaIngreso) {
+        this.fechaIngreso = fechaIngreso;
     }
 
     @Override
     public void analizarUsuario() {
         super.analizarUsuario();
-        System.out.println("Tipo: Profesional");
         System.out.println("Título: " + titulo);
-        System.out.println("Años de experiencia: " + añosExperiencia);
+        System.out.println("Fecha de ingreso: " + fechaIngreso);
     }
 }

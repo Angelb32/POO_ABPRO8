@@ -1,18 +1,23 @@
 package Tareas;
 
-	public class UsuarioAdmin_POO_ABPRO8 extends Usuario_POO_ABPRO8 implements Asesoria_POO_ABPRO8 {
+public class UsuarioAdmin_POO_ABPRO8 extends Usuario_POO_ABPRO8 {
 
-    public UsuarioAdmin_POO_ABPRO8(String nombre, String email, String contrasenia) {
-        super(nombre, email, contrasenia);
+    private int nivelDeAcceso;
+
+    public UsuarioAdmin_POO_ABPRO8(String nombreUsuario, String contraseña, int nivelDeAcceso) {
+        super(nombreUsuario, contraseña);
+        this.nivelDeAcceso = nivelDeAcceso;
     }
 
-    @Override
-    public void analizarUsuario() {
-        System.out.println("Usuario Administrativo: " + this.getNombre());
+    public int getNivelDeAcceso() {
+        return nivelDeAcceso;
     }
 
-    @Override
-    public void brindarAsesoria() {
-        System.out.println("Brindando asesoría como usuario administrativo...");
+    public void setNivelDeAcceso(int nivelDeAcceso) {
+        this.nivelDeAcceso = nivelDeAcceso;
+    }
+
+    public void reiniciarContraseña() {
+        // Código para reiniciar la contraseña del usuario
     }
 }

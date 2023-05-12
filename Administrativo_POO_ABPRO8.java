@@ -1,35 +1,27 @@
 package Tareas;
 
-	public class Administrativo_POO_ABPRO8 extends Usuario_POO_ABPRO8 {
+public class Administrativo_POO_ABPRO8 extends Usuario_POO_ABPRO8 {
     private String area;
-    private String experienciaPrev;
+    private String experienciaPrevia;
 
-    public Administrativo_POO_ABPRO8(String nombreUsuario, String area, String experienciaPrev) {
-        super(nombreUsuario);
+    public Administrativo_POO_ABPRO8(String nombreUsuario, String contraseña, String area, String experienciaPrevia) {
+        super(nombreUsuario, contraseña);
         this.area = area;
-        this.experienciaPrev = experienciaPrev;
+        this.experienciaPrevia = experienciaPrevia;
     }
 
     public String getArea() {
         return area;
     }
 
-    public void setArea(String area) {
-        this.area = area;
-    }
-
-    public String getExperienciaPrev() {
-        return experienciaPrev;
-    }
-
-    public void setExperienciaPrev(String experienciaPrev) {
-        this.experienciaPrev = experienciaPrev;
+    public String getExperienciaPrevia() {
+        return experienciaPrevia;
     }
 
     @Override
     public void analizarUsuario() {
         super.analizarUsuario();
         System.out.println("Área: " + area);
-        System.out.println("Experiencia previa: " + experienciaPrev);
+        System.out.println("Experiencia previa: " + experienciaPrevia);
     }
 }

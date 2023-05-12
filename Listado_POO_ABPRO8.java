@@ -1,22 +1,20 @@
 package Tareas;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class Listado_POO_ABPRO8 {
-
-    private List<Asesoria_POO_ABPRO8> usuarios;
+	public class Listado_POO_ABPRO8 {
+    private ArrayList<Asesoria_POO_ABPRO8> listaUsuarios;
 
     public Listado_POO_ABPRO8() {
-        usuarios = new ArrayList<>();
+        this.listaUsuarios = new ArrayList<Asesoria_POO_ABPRO8>();
     }
 
     public void agregarUsuario(Asesoria_POO_ABPRO8 usuario) {
-        usuarios.add(usuario);
+        this.listaUsuarios.add(usuario);
     }
 
     public void analizarUsuarios() {
-        for (Asesoria_POO_ABPRO8 usuario : usuarios) {
+        for (Asesoria_POO_ABPRO8 usuario : listaUsuarios) {
             usuario.analizarUsuario();
         }
     }

@@ -1,44 +1,24 @@
 package Tareas;
 
-public class Usuario_POO_ABPRO8 implements Asesoria_POO_ABPRO8 {
+	public abstract class Usuario_POO_ABPRO8 implements Asesoria_POO_ABPRO8 {
+    private String nombre;
+    private String correo;
 
-    private String nombreUsuario;
-    private String clave;
-
-    public Usuario_POO_ABPRO8(String nombreUsuario, String clave) {
-        this.nombreUsuario = nombreUsuario;
-        this.clave = clave;
+    public Usuario_POO_ABPRO8(String nombre, String correo) {
+        this.nombre = nombre;
+        this.correo = correo;
     }
 
-    public String getNombreUsuario() {
-        return nombreUsuario;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setNombreUsuario(String nombreUsuario) {
-        this.nombreUsuario = nombreUsuario;
-    }
-
-    public String getClave() {
-        return clave;
-    }
-
-    public void setClave(String clave) {
-        this.clave = clave;
+    public String getCorreo() {
+        return correo;
     }
 
     @Override
     public void analizarUsuario() {
-        System.out.println("Usuario: " + nombreUsuario);
-        System.out.println("Tipo de usuario: Normal");
-    }
-
-    @Override
-    public String getTitulo() {
-        return "N/A";
-    }
-
-    @Override
-    public String getFechaIngreso() {
-        return "N/A";
+        System.out.println("Nombre: " + nombre);
     }
 }

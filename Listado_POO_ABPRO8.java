@@ -5,19 +5,25 @@ import java.util.List;
 
 public class Listado_POO_ABPRO8 {
 
-    private List<Asesoria_POO_ABPRO8> usuarios;
+    private List<Asesoria_POO_ABPRO8> listaUsuarios;
 
     public Listado_POO_ABPRO8() {
-        usuarios = new ArrayList<>();
+        listaUsuarios = new ArrayList<>();
     }
 
     public void agregarUsuario(Asesoria_POO_ABPRO8 usuario) {
-        usuarios.add(usuario);
+        listaUsuarios.add(usuario);
     }
 
     public void analizarUsuarios() {
-        for (Asesoria_POO_ABPRO8 usuario : usuarios) {
+        for (Asesoria_POO_ABPRO8 usuario : listaUsuarios) {
             usuario.analizarUsuario();
+        }
+    }
+
+    public void brindarAsesorias() {
+        for (Asesoria_POO_ABPRO8 usuario : listaUsuarios) {
+            usuario.brindarAsesoria();
         }
     }
 }

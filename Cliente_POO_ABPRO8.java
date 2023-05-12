@@ -1,21 +1,29 @@
 package Tareas;
 
-public class Cliente_POO_ABPRO8 extends Usuario_POO_ABPRO8 {
-    private String empresa;
-    
-    public Cliente_POO_ABPRO8(String nombreUsuario, String contraseña, String empresa) {
-        super(nombreUsuario, contraseña);
-        this.empresa = empresa;
+	public class Cliente_POO_ABPRO8 extends Usuario_POO_ABPRO8 {
+
+    private int antiguedad;
+    private String tipoCliente;
+
+    public Cliente_POO_ABPRO8(String nombre, String correo, int antiguedad, String tipoCliente) {
+        super(nombre, correo);
+        this.antiguedad = antiguedad;
+        this.tipoCliente = tipoCliente;
     }
-    
-    public String getEmpresa() {
-        return empresa;
+
+    public int getAntiguedad() {
+        return antiguedad;
     }
-    
+
+    public String getTipoCliente() {
+        return tipoCliente;
+    }
+
     @Override
     public void analizarUsuario() {
         super.analizarUsuario();
-        System.out.println("Tipo de usuario: Cliente");
-        System.out.println("Empresa: " + empresa);
+        System.out.println("Tipo: Cliente");
+        System.out.println("Antigüedad: " + antiguedad + " años");
+        System.out.println("Tipo de cliente: " + tipoCliente);
     }
 }

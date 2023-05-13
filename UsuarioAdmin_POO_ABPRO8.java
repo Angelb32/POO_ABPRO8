@@ -1,21 +1,40 @@
 package Tareas;
 
-	public class UsuarioAdmin_POO_ABPRO8 extends Usuario_POO_ABPRO8 {
+public class UsuarioAdmin_POO_ABPRO8 extends Usuario_POO_ABPRO8 {
+    private String nombreUsuario;
+    private String contrasena;
 
-    private String permisos;
-
-    public UsuarioAdmin_POO_ABPRO8(String nombre, String username, String password, String permisos) {
-        super(nombre, username, password);
-        this.permisos = permisos;
+    public UsuarioAdmin_POO_ABPRO8(String nombre, String nombreUsuario, String contrasena) {
+        super(nombre);
+        this.nombreUsuario = nombreUsuario;
+        this.contrasena = contrasena;
     }
 
-    public void asignarPermisos(String permisos) {
-        this.permisos = permisos;
+    public String getNombreUsuario() {
+        return nombreUsuario;
     }
 
-    public void revocarPermisos() {
-        this.permisos = "";
+    public void setNombreUsuario(String nombreUsuario) {
+        this.nombreUsuario = nombreUsuario;
     }
 
-    // otros métodos específicos de usuario administrativo
+    public String getContrasena() {
+        return contrasena;
+    }
+
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
+    }
+
+    @Override
+    public void mostrarInformacion() {
+        super.mostrarInformacion();
+        System.out.println("Nombre de usuario: " + nombreUsuario);
+        System.out.println("Contraseña: " + contrasena);
+    }
+
+    @Override
+    public void analizarUsuario() {
+        System.out.println("Análisis de usuario administrador");
+    }
 }

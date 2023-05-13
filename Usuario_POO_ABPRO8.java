@@ -1,6 +1,6 @@
 package Tareas;
 
-	public abstract class Usuario_POO_ABPRO8 {
+public abstract class Usuario_POO_ABPRO8 {
     private String nombre;
 
     public Usuario_POO_ABPRO8(String nombre) {

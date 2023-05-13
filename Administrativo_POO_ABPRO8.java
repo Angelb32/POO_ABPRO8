@@ -13,7 +13,7 @@ package Tareas;
 
     @Override
     public void mostrarInformacion() {
-        System.out.println("Nombre de usuario: " + getNombreUsuario());
+    	System.out.println("Nombre de usuario: " + getNombre());
         System.out.println("Área: " + area);
         System.out.println("Experiencia previa: " + experienciaPrevia);
     }

@@ -1,6 +1,6 @@
 package Tareas;
 
-	public class Usuario_POO_ABPRO8 implements Asesoria_POO_ABPRO8 {
+public class Usuario_POO_ABPRO8 implements Asesoria {
     protected String nombre;
     protected String username;
     protected String email;

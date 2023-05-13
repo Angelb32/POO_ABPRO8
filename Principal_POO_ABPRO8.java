@@ -1,14 +1,19 @@
-package Tareas;
+package Tareas;	
 
-public class Principal_POO_ABPRO8 {
-    public static void main(String[] args) {
-    	Usuario_POO_ABPRO8 usuario1 = new UsuarioAdmin_POO_ABPRO8("admin", "123456", 1);
-        Usuario_POO_ABPRO8 usuario2 = new UsuarioNormal_POO_ABPRO8("usuario", "abcdef");
+	public static void Principal_POO_ABPRO8(String[] args) {
+    Listado listado = new Listado();
 
-        Listado_POO_ABPRO8 listado = new Listado_POO_ABPRO8();
-        listado.agregarUsuario(usuario1);
-        listado.agregarUsuario(usuario2);
+    // Crear instancias de diferentes tipos de usuarios
+    Usuario_POO_ABPRO8 cliente = new Cliente_POO_ABPRO8("Juan", "juan123", "juan@correo.com", "987654321");
+    Usuario_POO_ABPRO8 profesional = new Profesional_POO_ABPRO8("Pedro", "pedro456", "pedro@correo.com", "Ingeniero", LocalDate.now());
+    Usuario_POO_ABPRO8 administrativo = new Administrativo_POO_ABPRO8("María", "maria789", "maria@correo.com", "Recursos Humanos", 2);
 
-        listado.analizarUsuarios();
-    }
+    // Agregar instancias al listado
+    listado.agregarUsuario(cliente);
+    listado.agregarUsuario(profesional);
+    listado.agregarUsuario(administrativo);
+
+    // Llamar al método que despliega los datos
+    listado.analizarUsuarios();
+	}
 }

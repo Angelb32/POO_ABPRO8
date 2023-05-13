@@ -1,23 +1,21 @@
 package Tareas;
 
-public class UsuarioAdmin_POO_ABPRO8 extends Usuario_POO_ABPRO8 {
+	public class UsuarioAdmin_POO_ABPRO8 extends Usuario_POO_ABPRO8 {
 
-    private int nivelDeAcceso;
+    private String permisos;
 
-    public UsuarioAdmin_POO_ABPRO8(String nombreUsuario, String contraseña, int nivelDeAcceso) {
-        super(nombreUsuario, contraseña);
-        this.nivelDeAcceso = nivelDeAcceso;
+    public UsuarioAdmin_POO_ABPRO8(String nombre, String username, String password, String permisos) {
+        super(nombre, username, password);
+        this.permisos = permisos;
     }
 
-    public int getNivelDeAcceso() {
-        return nivelDeAcceso;
+    public void asignarPermisos(String permisos) {
+        this.permisos = permisos;
     }
 
-    public void setNivelDeAcceso(int nivelDeAcceso) {
-        this.nivelDeAcceso = nivelDeAcceso;
+    public void revocarPermisos() {
+        this.permisos = "";
     }
 
-    public void reiniciarContraseña() {
-        // Código para reiniciar la contraseña del usuario
-    }
+    // otros métodos específicos de usuario administrativo
 }

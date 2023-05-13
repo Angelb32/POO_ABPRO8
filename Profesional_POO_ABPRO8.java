@@ -1,6 +1,6 @@
 package Tareas;
 
-	public class Profesional_POO_ABPRO8 extends Usuario_POO_ABPRO8 {
+public class Profesional_POO_ABPRO8 extends Usuario_POO_ABPRO8 {
 
     private String titulo;
     private String fechaIngreso;
@@ -13,7 +13,7 @@ package Tareas;
 
     @Override
     public void mostrarInformacion() {
-        System.out.println("Nombre de usuario: " + getNombreUsuario());
+        System.out.println("Nombre de usuario: " + getNombre());
         System.out.println("Título: " + titulo);
         System.out.println("Fecha de ingreso: " + fechaIngreso);
     }

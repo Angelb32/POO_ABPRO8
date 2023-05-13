@@ -1,25 +1,29 @@
 package Tareas;
 
-	public abstract class Usuario_POO_ABPRO8 implements Asesoria_POO_ABPRO8 {
+public abstract class Usuario_POO_ABPRO8 {
+    // Atributos de la clase Usuario
+    private String nombre;
 
-    private String nombreUsuario;
-
-    public Usuario_POO_ABPRO8(String nombreUsuario) {
-        this.nombreUsuario = nombreUsuario;
+    // Constructor
+    public Usuario_POO_ABPRO8(String nombre) {
+        this.nombre = nombre;
     }
 
-    public abstract void mostrarInformacion();
-
-    @Override
-    public void analizarUsuario() {
-        System.out.println("Nombre de usuario: " + nombreUsuario);
+    // Métodos
+    public String getNombre() {
+        return nombre;
     }
 
-    public String getNombreUsuario() {
-        return nombreUsuario;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public void setNombreUsuario(String nombreUsuario) {
-        this.nombreUsuario = nombreUsuario;
+    // Método abstracto para analizar el usuario
+    public abstract void analizarUsuario();
+
+    // Método para mostrar información del usuario
+    public void mostrarInformacion() {
+        // Mostramos el nombre del usuario
+        System.out.println("Nombre: " + nombre);
     }
 }

@@ -1,6 +1,6 @@
 package Tareas;
 
-	public class Cliente_POO_ABPRO8 extends Usuario_POO_ABPRO8 {
+public class Cliente_POO_ABPRO8 extends Usuario_POO_ABPRO8 {
     // Atributos propios de la clase Cliente
     private String empresa;
 
